@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,66 +8,34 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-
-  <!-- Cabeçalho Principal -->
   <header class="bg-success text-white text-center py-3">
-    <h1 class="m-0">Guia de Estádios</h1>
+    <h1>Guia de Estádios</h1>
   </header>
-
-  <!-- Subcabeçalho com Navegação -->
-  <nav class="bg-success-subtle py-2">
-    <ul class="nav justify-content-center">
-      <li class="nav-item"><a class="nav-link text-success fw-bold" href="#">Home</a></li>
-      <li class="nav-item"><a class="nav-link text-success fw-bold" href="#estadios">Estádios</a></li>
-      <li class="nav-item"><a class="nav-link text-success fw-bold" href="#galeria">Galeria</a></li>
-      <li class="nav-item"><a class="nav-link text-success fw-bold" href="#contato">Contato</a></li>
-    </ul>
+  <nav class="bg-success-subtle text-center py-2">
+    <a class="mx-3 text-success fw-bold text-decoration-none" href="#">Home</a>
+    <a class="mx-3 text-success fw-bold text-decoration-none" href="#estadios">Estádios</a>
+    <a class="mx-3 text-success fw-bold text-decoration-none" href="#galeria">Galeria</a>
+    <a class="mx-3 text-success fw-bold text-decoration-none" href="#contato">Contato</a>
   </nav>
 
-  <!-- Conteúdo principal -->
   <main class="container my-4">
-
     <section id="estadios" class="mb-5">
-      <h2 class="text-center mb-4">Estádios Famosos</h2>
+      <h2 class="text-center mb-4">Os maiores estádios do mundo</h2>
+      <p class="text-center mb-4 text-muted fs-5">
+        Explore uma seleção exclusiva dos estádios mais emblemáticos do futebol mundial. Conheça suas histórias, clubes e curiosidades que fazem desses palcos verdadeiras joias do esporte.
+      </p>
       <div class="d-flex justify-content-between mb-3">
-        <button class="btn btn-outline-success nav-btn" onclick="moveSlide(-2)">⟨</button>
-        <button class="btn btn-outline-success nav-btn" onclick="moveSlide(2)">⟩</button>
+        <button class="btn btn-outline-success" onclick="moveSlide(-2)">⟨</button>
+        <button class="btn btn-outline-success" onclick="moveSlide(2)">⟩</button>
       </div>
-      <div id="carousel-container">
-        <div id="carousel">
-          <div class="card stadium-card m-2">
-            <img src="img/maracana.jpg" class="stadium-img" alt="Maracanã">
-            <div class="card-body">
-              <h5 class="card-title">Maracanã</h5>
-              <p class="card-text">Flamengo e Fluminense</p>
-            </div>
-          </div>
-          <div class="card stadium-card m-2">
-            <img src="img/campnou.jpg" class="stadium-img" alt="Camp Nou">
-            <div class="card-body">
-              <h5 class="card-title">Camp Nou</h5>
-              <p class="card-text">Barcelona</p>
-            </div>
-          </div>
-          <div class="card stadium-card m-2">
-            <img src="img/oldtrafford.jpg" class="stadium-img" alt="Old Trafford">
-            <div class="card-body">
-              <h5 class="card-title">Old Trafford</h5>
-              <p class="card-text">Manchester United</p>
-            </div>
-          </div>
-          <div class="card stadium-card m-2">
-            <img src="img/bernabeu.jpg" class="stadium-img" alt="Santiago Bernabéu">
-            <div class="card-body">
-              <h5 class="card-title">Santiago Bernabéu</h5>
-              <p class="card-text">Real Madrid</p>
-            </div>
-          </div>
-        </div>
+      <div id="carousel-wrapper" onmouseover="pauseAutoSlide()" onmouseout="resumeAutoSlide()">
+        <div id="carousel"></div>
       </div>
     </section>
 
+    <!-- Seção de Fale Conosco -->
     <section id="contato" class="mb-5">
       <h2 class="text-center mb-4">Fale Conosco</h2>
       <form class="bg-light p-4 rounded w-75 mx-auto">
@@ -82,32 +51,20 @@
         </div>
         <div class="mb-3">
           <label for="mensagem" class="form-label">Mensagem</label>
-          <textarea id="mensagem" rows="4" class="form-control"></textarea>
+          <textarea id="mensagem" rows="4" class="form-control" placeholder="Digite sua mensagem"></textarea>
         </div>
-        <button type="submit" class="btn btn-success">Enviar</button>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success">Enviar</button>
+        </div>
       </form>
     </section>
   </main>
 
-  <!-- Rodapé -->
   <footer class="bg-success text-white text-center py-3">
-    <p>&copy; 2025 Guia de Estádios | <a class="text-white" href="#">Facebook</a> | <a class="text-white" href="#">Instagram</a></p>
+    <p>&copy; 2025 Guia de Estádios</p>
   </footer>
 
-  <script>
-    let currentIndex = 0;
-    function moveSlide(step) {
-      const carousel = document.getElementById('carousel');
-      const cardWidth = document.querySelector('.stadium-card').offsetWidth + 32;
-      currentIndex += step;
-      const totalCards = document.querySelectorAll('.stadium-card').length;
-      const maxIndex = totalCards - 2;
-      if (currentIndex < 0) currentIndex = 0;
-      if (currentIndex > maxIndex) currentIndex = maxIndex;
-      carousel.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
-    }
-  </script>
-  <script src="app.js" defer></script>
-
+  <script src="app.js"></script>
 </body>
+
 </html>

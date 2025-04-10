@@ -2,56 +2,52 @@ body {
   font-family: Arial, sans-serif;
 }
 
-#carousel-container {
+#carousel-wrapper {
   overflow: hidden;
-  width: 100%;
+  position: relative;
 }
 
 #carousel {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
 .stadium-card {
-  flex: 0 0 calc(50% - 1rem);
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.stadium-card .card {
   height: 500px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: none;
-  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.stadium-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.stadium-card .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.stadium-img {
-  width: 100%;
+.stadium-card .card-img-top {
   height: 85%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.4s ease;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-.stadium-card:hover .stadium-img {
-  transform: scale(1.05);
-}
-
-.card-body {
+.stadium-card .card-body {
   height: 15%;
   text-align: center;
-  padding: 0.5rem;
+  padding: 10px;
   background-color: #f8f9fa;
-}
-
-/* Botões com animação suave */
-button.btn {
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button.btn:hover {
-  background-color: #198754;
-  color: white;
-  transform: scale(1.05);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
