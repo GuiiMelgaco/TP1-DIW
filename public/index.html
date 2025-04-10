@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guia de Estádios</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -26,16 +28,15 @@
       <p class="text-center mb-4 text-muted fs-5">
         Explore uma seleção exclusiva dos estádios mais emblemáticos do futebol mundial. Conheça suas histórias, clubes e curiosidades que fazem desses palcos verdadeiras joias do esporte.
       </p>
-      <div class="d-flex justify-content-between mb-3">
-        <button class="btn btn-outline-success" onclick="moveSlide(-2)">⟨</button>
-        <button class="btn btn-outline-success" onclick="moveSlide(2)">⟩</button>
-      </div>
+<div class="d-flex justify-content-between mb-3">
+  <button class="carousel-btn" onclick="moveSlide(-2)">⟨</button>
+  <button class="carousel-btn" onclick="moveSlide(2)">⟩</button>
+</div>
       <div id="carousel-wrapper" onmouseover="pauseAutoSlide()" onmouseout="resumeAutoSlide()">
         <div id="carousel"></div>
       </div>
     </section>
 
-    <!-- Seção de Fale Conosco -->
     <section id="contato" class="mb-5">
       <h2 class="text-center mb-4">Fale Conosco</h2>
       <form class="bg-light p-4 rounded w-75 mx-auto">
@@ -60,8 +61,22 @@
     </section>
   </main>
 
-  <footer class="bg-success text-white text-center py-3">
-    <p>&copy; 2025 Guia de Estádios</p>
+  <footer class="bg-success text-white py-4 mt-5">
+    <div class="container text-center">
+      <div class="mb-3">
+        <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
+          <i class="bi bi-facebook"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
+          <i class="bi bi-instagram"></i> Instagram
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="text-white mx-2">
+          <i class="bi bi-twitter"></i> Twitter
+        </a>
+      </div>
+      <p class="mb-0">© 2025 Guia de Estádios. Todos os direitos reservados.</p>
+      <p class="mb-0"><a href="#" class="text-white text-decoration-underline">Política de Privacidade</a> | <a href="#" class="text-white text-decoration-underline">Termos de Uso</a></p>
+    </div>
   </footer>
 
   <script src="app.js"></script>
