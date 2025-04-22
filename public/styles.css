@@ -1,131 +1,148 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-}
-
-header h1 {
-  font-size: 2.5rem;
+/* Reset básico */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-nav a {
-  font-size: 1.1rem;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+  color: #333;
 }
 
-#carousel-wrapper {
-  overflow: hidden;
-  position: relative;
+/* Cabeçalho com sombra e contraste */
+header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #059769, #185a9d);
 }
 
-#carousel {
-  display: flex;
+/* Carrossel com estilo moderno */
+#carouselDestaque .carousel-item img {
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s ease;
-  gap: 20px;
 }
 
-#imagem {
-  width: 100%;
-  max-width: 600px;
-  height: 350px;
-  object-fit: cover;
-  margin: 0 auto;
-  display: block;
-}
-.card {
-  flex: 1 0 48%;
-  max-width: 48%;
-  margin: 0 1%;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-  height: 450px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+#carouselDestaque .carousel-item:hover img {
+  transform: scale(1.02);
 }
 
-.stadium-card .card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.card img {
-  height: 250px;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.card-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.carousel-caption {
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
   padding: 1rem;
 }
 
-.card-title {
-  font-size: 1.3rem;
+/* Cards responsivos e com glassmorphism */
+.card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+/* Botões modernos */
+.btn-success {
+  background: linear-gradient(to right, #059769, #185a9d);
+  border: none;
   font-weight: bold;
 }
 
-.card-text {
-  font-size: 1rem;
-  color: #555;
+.btn-success:hover {
+  background: linear-gradient(to right, #059769, #0f3443);
 }
 
-/* Página de Detalhes */
-#detalhes-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  justify-content: center;
+/* Seção sobre */
+#sobre {
+  background: linear-gradient(to bottom, #f0f8ff, #ffffff);
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
 }
 
-#detalhes-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+/* Rodapé */
+footer {
+  font-size: 0.9rem;
+  background: linear-gradient(to right, #059769, #185a9d);
 }
 
-.detalhes-info {
-  max-width: 500px;
+/* Personalização das imagens de perfil */
+img.img-fluid.rounded-circle {
+  border: 3px solid #28a745; /* Borda verde */
 }
 
-.voltar-btn {
-  margin-top: 1.5rem;
+/* Seção Redes Sociais */
+.card-body a {
+  font-size: 1.2rem;
+  padding: 10px 20px;
 }
 
-/* Responsividade */
+.separador-titulo {
+  font-weight: bold;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.separador-titulo span,
+.separador-titulo strong {
+  font-weight: bold;
+}
+
+.separador-titulo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #059769, #185a9d);
+  border-radius: 2px;
+}
+
+
+/* Responsividade extra para mobile */
 @media (max-width: 768px) {
-  .card {
-    flex: 1 0 100%;
-    max-width: 100%;
-    height: auto;
+  header h1 {
+    font-size: 1.2rem;
   }
 
-  #detalhes-container {
-    flex-direction: column;
-    align-items: center;
+  .carousel-caption h5 {
+    font-size: 1rem;
   }
 
-  #carousel {
-    flex-direction: column !important;
-    align-items: center;
+  .carousel-caption p {
+    font-size: 0.85rem;
   }
 
-  #carousel .card {
-    width: 100% !important;
-    min-width: unset !important;
-    margin-bottom: 1rem;
+  .card-body h5 {
+    font-size: 1rem;
+  }
+
+  .card-body p {
+    font-size: 0.85rem;
+  }
+
+  #informacoes-aluno .row > div {
+    margin-bottom: 20px;
   }
 }
-

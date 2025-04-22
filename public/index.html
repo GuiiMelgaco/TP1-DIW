@@ -1,85 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guia de Estádios</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="bg-success text-white text-center py-3">
-    <h1>Guia de Estádios</h1>
-  </header>
-  <nav class="bg-success-subtle text-center py-2">
-    <a class="mx-3 text-success fw-bold text-decoration-none" href="#">Home</a>
-    <a class="mx-3 text-success fw-bold text-decoration-none" href="#estadios">Estádios</a>
-    <a class="mx-3 text-success fw-bold text-decoration-none" href="#galeria">Galeria</a>
-    <a class="mx-3 text-success fw-bold text-decoration-none" href="#contato">Contato</a>
-  </nav>
-
-  <main class="container my-4">
-    <section id="estadios" class="mb-5">
-      <h2 class="text-center mb-4">Os maiores estádios do mundo</h2>
-      <p class="text-center mb-4 text-muted fs-5">
-        Explore uma seleção exclusiva dos estádios mais emblemáticos do futebol mundial. Conheça suas histórias, clubes e curiosidades que fazem desses palcos verdadeiras joias do esporte.
-      </p>
-<div class="d-flex justify-content-between mb-3">
-  <button class="carousel-btn" onclick="moveSlide(-2)">⟨</button>
-  <button class="carousel-btn" onclick="moveSlide(2)">⟩</button>
-</div>
-      <div id="carousel-wrapper" onmouseover="pauseAutoSlide()" onmouseout="resumeAutoSlide()">
-        <div id="carousel"></div>
-      </div>
-    </section>
-
-    <section id="contato" class="mb-5">
-      <h2 class="text-center mb-4">Fale Conosco</h2>
-      <form class="bg-light p-4 rounded w-75 mx-auto">
-        <div class="row mb-3">
-          <div class="col-md-6">
-            <label for="nome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="nome" placeholder="Seu nome">
-          </div>
-          <div class="col-md-6">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="seu@email.com">
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="mensagem" class="form-label">Mensagem</label>
-          <textarea id="mensagem" rows="4" class="form-control" placeholder="Digite sua mensagem"></textarea>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="btn btn-success">Enviar</button>
-        </div>
-      </form>
-    </section>
-  </main>
-
-  <footer class="bg-success text-white py-4 mt-5">
-    <div class="container text-center">
-      <div class="mb-3">
-        <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
-          <i class="bi bi-facebook"></i> Facebook
-        </a>
-        <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
-          <i class="bi bi-instagram"></i> Instagram
-        </a>
-        <a href="https://www.twitter.com" target="_blank" class="text-white mx-2">
-          <i class="bi bi-twitter"></i> Twitter
-        </a>
-      </div>
-      <p class="mb-0">© 2025 Guia de Estádios. Todos os direitos reservados.</p>
-      <p class="mb-0"><a href="#" class="text-white text-decoration-underline">Política de Privacidade</a> | <a href="#" class="text-white text-decoration-underline">Termos de Uso</a></p>
+  <!-- Cabeçalho -->
+  <header class="bg-success text-white p-3 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <img src="img/logo.png" alt="Logo" height="40" class="me-2">
+      <h1 class="h4 m-0">Guia de Estádios</h1>
     </div>
+    <nav>
+      <a href="#destaque" class="text-white me-3">Destaques</a>
+      <a href="#cards" class="text-white me-3">Estádios</a>
+      <a href="#sobre" class="text-white">Sobre</a>
+    </nav>
+  </header>
+
+  <!-- Seção 1 - Destaques com Carrossel -->
+  <section id="destaque" class="container my-5">
+    <h2 class="separador-titulo">Itens em Destaque</h2>
+    <div id="carouselDestaque" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="carousel-inner"></div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaque" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaque" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Seção 2 - Cards dos Estádios -->
+  <section id="cards" class="container my-5">
+    <h2 class="separador-titulo">Todos os Estádios</h2>
+    <div class="row" id="estadio-cards"></div>
+  </section>
+
+ <!-- Seção 3 - Sobre -->
+<section id="informacoes-aluno" class="container my-5">
+  <h2 class="separador-titulo">Informações do Aluno</h2>
+
+  <!-- Container simples, sem bordas ou fundo -->
+  <div class="p-4">
+    <div class="row">
+      <!-- Seção "Sobre" (60%) -->
+      <div class="col-lg-7 mb-4 mb-lg-0">
+        <h6 class="mb-3">Sobre</h6>
+        <p>Sou um aluno apaixonado por tecnologia e automação. Tenho experiência em projetos de sistemas, programação de microcontroladores e desenvolvimento de sistemas de supervisão. Atualmente, estou cursando Engenharia de Controle e Automação.</p>
+      </div>
+
+      <!-- Seção "Autoria" e "Redes Sociais" (30%) -->
+      <div class="col-lg-5">
+        <h6 class="mb-3">Autoria</h6>
+        <div class="d-flex mb-3">
+          <img src="img/foto.jpg" alt="Foto do Aluno" class="img-fluid rounded-circle" style="width: 80px; height: 80px; object-fit: cover;">
+          <div class="ms-3">
+            <h6 class="mb-1">Nome: João da Silva</h6>
+            <p class="mb-1">Curso: Engenharia de Controle e Automação</p>
+            <p class="mb-0">Turno: Noite</p>
+          </div>
+        </div>
+
+        <!-- Seção Redes Sociais -->
+        <h6>Redes Sociais</h6>
+        <div class="d-flex justify-content-center">
+          <a href="https://www.linkedin.com" class="btn btn-primary mx-2">LinkedIn</a>
+          <a href="https://github.com" class="btn btn-dark mx-2">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Rodapé -->
+  <footer class="bg-success text-white text-center py-3">
+    <p>&copy; 2025 Guia de Estádios</p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
 </body>
-
 </html>
