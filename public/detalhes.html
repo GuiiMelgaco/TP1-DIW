@@ -7,17 +7,6 @@
   <title>Detalhes do Estádio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Estilo adicional para posicionar o botão fora do cabeçalho */
-    .top-right-button {
-      position: absolute;
-      top: 100px; /* Ajuste para que o botão fique logo abaixo do cabeçalho */
-      right: 20px;
-    }
-    header {
-      position: relative; /* Garantir que o cabeçalho esteja no fluxo normal */
-    }
-  </style>
 </head>
 
 <body>
@@ -26,9 +15,13 @@
   </header>
 
   <!-- Botão "Página inicial" posicionado fora do cabeçalho -->
-  <a href="index.html" class="btn btn-success top-right-button">Página inicial</a>
+  <div class="container mt-2">
+    <a href="index.html">
+      <img src="img/logotipo.png" alt="Página Inicial" style="height: 70px; width: auto;" />
+    </a>
+  </div>
 
-  <main class="container my-5">
+  <main class="container mt-2">
     <h2 class="separador-titulo"><strong>Informações do</strong> <span id="nome"></span></h2>
     <div class="row">
       <!-- Cartão com a imagem e informações do estádio -->
@@ -54,35 +47,20 @@
 
     <!-- Fotos do item alinhadas à esquerda -->
     <div id="fotos-do-item" class="mt-5">
-      <h3>Fotos do Item</h3>
-      <div class="row">
-        <!-- Fotos alinhadas à esquerda -->
-        <div class="col-3">
-          <img id="foto1" class="img-fluid rounded mb-3" alt="Foto 1 do Estádio">
-        </div>
-        <div class="col-3">
-          <img id="foto2" class="img-fluid rounded mb-3" alt="Foto 2 do Estádio">
-        </div>
-        <div class="col-3">
-          <img id="foto3" class="img-fluid rounded mb-3" alt="Foto 3 do Estádio">
-        </div>
-        <div class="col-3">
-          <img id="foto4" class="img-fluid rounded mb-3" alt="Foto 4 do Estádio">
-        </div>
-        <div class="col-3">
-          <img id="foto5" class="img-fluid rounded mb-3" alt="Foto 5 do Estádio">
-        </div>
-        <div class="col-3">
-          <img id="foto6" class="img-fluid rounded mb-3" alt="Foto 6 do Estádio">
-        </div>
-        <div class="col-3">
-          <img id="foto7" class="img-fluid rounded mb-3" alt="Foto 7 do Estádio">
-        </div>
-        <div class="col-3">
-          <img id="foto8" class="img-fluid rounded mb-3" alt="Foto 8 do Estádio">
-        </div>
+      <h2 class="separador-titulo"><strong>Fotos adicionais do</strong> <span id="nome-ca"></span></h2>
+      
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <button onclick="moveSlide(-1)" class="btn btn-link p-0" style="font-size: 2rem; color: #198754; background-color: transparent; border: none;">
+          &#8592;
+        </button>
+        <button onclick="moveSlide(1)" class="btn btn-link p-0" style="font-size: 2rem; color: #198754; background-color: transparent; border: none;">
+          &#8594;
+        </button>
       </div>
+    
+      <div id="carousel" class="d-flex flex-wrap justify-content-center"></div>
     </div>
+
   </main>
 
   <footer class="bg-success text-white text-center py-3">
@@ -97,6 +75,7 @@
 
     if (estadio) {
       document.getElementById("nome").textContent = estadio.nome;
+      document.getElementById("nome-ca").textContent = estadio.nome;
       document.getElementById("imagem").src = estadio.imagem;
       document.getElementById("imagem").alt = `Imagem do estádio ${estadio.nome}`;
       document.getElementById("capacidade").textContent = estadio.capacidade;
@@ -106,13 +85,58 @@
       document.getElementById("descricao").textContent = estadio.descricao;
       document.getElementById("recorde").textContent = estadio.recorde;
       document.getElementById("eventos").textContent = estadio.eventos;
+       // Carrossel de fotos adicionais
+       const carousel = document.getElementById("carousel");
+let currentIndex = 0;
 
-      // Preencher as fotos adicionais
-      for (let i = 0; i < estadio.imagens.length; i++) {
-        document.getElementById(`foto${i + 1}`).src = estadio.imagens[i];
-        document.getElementById(`foto${i + 1}`).alt = `Foto ${i + 1} do Estádio ${estadio.nome}`;
-      }
-    }
+function renderCarousel() {
+  carousel.innerHTML = "";
+
+  const fotos = estadio.imagens;
+  const screenWidth = window.innerWidth;
+  const imagensPorPagina = screenWidth <= 768 ? 1 : 4;
+
+  for (
+    let i = currentIndex;
+    i < currentIndex + imagensPorPagina && i < fotos.length;
+    i++
+  ) {
+    const img = document.createElement("img");
+    img.src = fotos[i];
+    img.alt = `Foto ${i + 1} do Estádio ${estadio.nome}`;
+    img.className = "img-fluid rounded m-2";
+    img.style.width = "300px";
+    img.style.height = "200px";
+    img.style.objectFit = "cover";
+    carousel.appendChild(img);
+  }
+}
+
+window.addEventListener("resize", () => {
+  currentIndex = 0;
+  renderCarousel();
+});
+
+function moveSlide(direction) {
+  const screenWidth = window.innerWidth;
+  const imagensPorPagina = screenWidth <= 768 ? 1 : 4;
+
+  currentIndex += direction;
+
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex > estadio.imagens.length - imagensPorPagina) {
+    currentIndex = Math.max(estadio.imagens.length - imagensPorPagina, 0);
+  }
+
+  renderCarousel();
+}
+
+renderCarousel();
+window.moveSlide = moveSlide;
+console.log("Total de imagens:", estadio.imagens.length);
+}
+
+
   </script>
 </body>
 

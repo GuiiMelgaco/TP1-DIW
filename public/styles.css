@@ -119,6 +119,15 @@ img.img-fluid.rounded-circle {
   border-radius: 2px;
 }
 
+.top-left-button {
+  position: absolute;
+  top: 120px;
+  left: 220px;
+}
+
+header {
+  position: relative; /* Garantir que o cabeçalho esteja no fluxo normal */
+}
 
 /* Responsividade extra para mobile */
 @media (max-width: 768px) {
@@ -145,4 +154,12 @@ img.img-fluid.rounded-circle {
   #informacoes-aluno .row > div {
     margin-bottom: 20px;
   }
+
+  .top-right-button {
+    position: relative;
+    top: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px; /* Espaçamento entre o botão e o título */
+  }
+  
 }
