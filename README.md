@@ -5,7 +5,7 @@
 - Link do github: https://github.com/GuiiMelgaco/TP1-DIW/tree/main/public
 
 ## Print da homepage
-![alt text](homepage.png)
+<img src="homepage.png"/>
 
 ## Print da página de detalhes
-![alt text](detalhes.png)
+<img src="detalhes.png"/>
