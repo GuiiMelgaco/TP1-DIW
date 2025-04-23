@@ -2,7 +2,7 @@ const estadios = [
   {
     id: 1,
     nome: "Camp Nou",
-    imagem: "img/campnou.jpg",
+    imagem: "assets/img/campnou.jpg",
     capacidade: "99.354",
     localizacao: "Barcelona, Espanha",
     timeMandante: "FC Barcelona",
@@ -11,20 +11,20 @@ const estadios = [
     recorde: "120.000 pessoas em um clássico contra o Real Madrid.",
     eventos: "Final da Liga dos Campeões de 1999, Jogos Olímpicos de 1992.",
     imagens: [
-      "img/campnou/foto1.jpg",
-      "img/campnou/foto2.jpg",
-      "img/campnou/foto3.jpg",
-      "img/campnou/foto4.jpg",
-      "img/campnou/foto5.jpg",
-      "img/campnou/foto6.jpg",
-      "img/campnou/foto7.jpg",
-      "img/campnou/foto8.jpg"
+      "assets/img/campnou/foto1.jpg",
+      "assets/img/campnou/foto2.jpg",
+      "assets/img/campnou/foto3.jpg",
+      "assets/img/campnou/foto4.jpg",
+      "assets/img/campnou/foto5.jpg",
+      "assets/img/campnou/foto6.jpg",
+      "assets/img/campnou/foto7.jpg",
+      "assets/img/campnou/foto8.jpg"
     ]
   },
   {
     id: 2,
     nome: "Santiago Bernabéu",
-    imagem: "img/bernabeu.jpg",
+    imagem: "assets/img/bernabeu.jpg",
     capacidade: "81.044",
     localizacao: "Madri, Espanha",
     timeMandante: "Real Madrid",
@@ -33,20 +33,20 @@ const estadios = [
     recorde: "127.000 pessoas em uma final da Copa da Europa.",
     eventos: "Final da Copa do Mundo de 1982, Final da Liga dos Campeões de 2010.",
     imagens: [
-      "img/bernabeu/foto1.jpg",
-      "img/bernabeu/foto2.jpg",
-      "img/bernabeu/foto3.jpg",
-      "img/bernabeu/foto4.jpg",
-      "img/bernabeu/foto5.jpg",
-      "img/bernabeu/foto6.jpg",
-      "img/bernabeu/foto7.jpg",
-      "img/bernabeu/foto8.jpg"
+      "assets/img/bernabeu/foto1.jpg",
+      "assets/img/bernabeu/foto2.jpg",
+      "assets/img/bernabeu/foto3.jpg",
+      "assets/img/bernabeu/foto4.jpg",
+      "assets/img/bernabeu/foto5.jpg",
+      "assets/img/bernabeu/foto6.jpg",
+      "assets/img/bernabeu/foto7.jpg",
+      "assets/img/bernabeu/foto8.jpg"
     ]
   },
   {
     id: 3,
     nome: "Maracanã",
-    imagem: "img/maracana.jpg",
+    imagem: "assets/img/maracana.jpg",
     capacidade: "78.838",
     localizacao: "Rio de Janeiro, Brasil",
     timeMandante: "Flamengo e Fluminense",
@@ -55,20 +55,20 @@ const estadios = [
     recorde: "199.854 pessoas na final da Copa do Mundo de 1950.",
     eventos: "Final da Copa do Mundo de 1950, Jogos Olímpicos de 2016, Final da Copa Libertadores de 2019.",
     imagens: [
-      "img/maracana/foto1.jpg",
-      "img/maracana/foto2.jpg",
-      "img/maracana/foto3.jpg",
-      "img/maracana/foto4.jpg",
-      "img/maracana/foto5.jpg",
-      "img/maracana/foto6.jpg",
-      "img/maracana/foto7.jpg",
-      "img/maracana/foto8.jpg"
+      "assets/img/maracana/foto1.jpg",
+      "assets/img/maracana/foto2.jpg",
+      "assets/img/maracana/foto3.jpg",
+      "assets/img/maracana/foto4.jpg",
+      "assets/img/maracana/foto5.jpg",
+      "assets/img/maracana/foto6.jpg",
+      "assets/img/maracana/foto7.jpg",
+      "assets/img/maracana/foto8.jpg"
     ]
   },
   {
     id: 4,
     nome: "Allianz Arena",
-    imagem: "img/allianz.jpg",
+    imagem: "assets/img/allianz.jpg",
     capacidade: "75.000",
     localizacao: "Munique, Alemanha",
     timeMandante: "Bayern de Munique",
@@ -77,20 +77,20 @@ const estadios = [
     recorde: "75.000 pessoas em uma final da Liga dos Campeões.",
     eventos: "Final da Liga dos Campeões de 2012, Final da Copa do Mundo de 2006.",
     imagens: [
-      "img/allianz/foto1.jpg",
-      "img/allianz/foto2.jpg",
-      "img/allianz/foto3.jpg",
-      "img/allianz/foto4.jpg",
-      "img/allianz/foto5.jpg",
-      "img/allianz/foto6.jpg",
-      "img/allianz/foto7.jpg",
-      "img/allianz/foto8.jpg"
+      "assets/img/allianz/foto1.jpg",
+      "assets/img/allianz/foto2.jpg",
+      "assets/img/allianz/foto3.jpg",
+      "assets/img/allianz/foto4.jpg",
+      "assets/img/allianz/foto5.jpg",
+      "assets/img/allianz/foto6.jpg",
+      "assets/img/allianz/foto7.jpg",
+      "assets/img/allianz/foto8.jpg"
     ]
   },
   {
     id: 5,
     nome: "San Siro",
-    imagem: "img/sansiro.jpg",
+    imagem: "assets/img/sansiro.jpg",
     capacidade: "75.923",
     localizacao: "Milão, Itália",
     timeMandante: "AC Milan e Internazionale",
@@ -99,20 +99,20 @@ const estadios = [
     recorde: "80.000 pessoas em uma final da Liga dos Campeões.",
     eventos: "Final da Copa do Mundo de 1990, Final da Liga dos Campeões de 2003.",
     imagens: [
-      "img/sansiro/foto1.jpg",
-      "img/sansiro/foto2.jpg",
-      "img/sansiro/foto3.jpg",
-      "img/sansiro/foto4.jpg",
-      "img/sansiro/foto5.jpg",
-      "img/sansiro/foto6.jpg",
-      "img/sansiro/foto7.jpg",
-      "img/sansiro/foto8.jpg"
+      "assets/img/sansiro/foto1.jpg",
+      "assets/img/sansiro/foto2.jpg",
+      "assets/img/sansiro/foto3.jpg",
+      "assets/img/sansiro/foto4.jpg",
+      "assets/img/sansiro/foto5.jpg",
+      "assets/img/sansiro/foto6.jpg",
+      "assets/img/sansiro/foto7.jpg",
+      "assets/img/sansiro/foto8.jpg"
     ]
   },
   {
     id: 6,
     nome: "Old Trafford",
-    imagem: "img/oldtrafford.jpg",
+    imagem: "assets/img/oldtrafford.jpg",
     capacidade: "74.140",
     localizacao: "Manchester, Inglaterra",
     timeMandante: "Manchester United",
@@ -121,20 +121,20 @@ const estadios = [
     recorde: "76.962 pessoas em um jogo contra o AC Milan.",
     eventos: "Final da Liga dos Campeões de 2003, Jogos Olímpicos de 2012.",
     imagens: [
-      "img/trafford/foto1.jpg",
-      "img/trafford/foto2.jpg",
-      "img/trafford/foto3.jpg",
-      "img/trafford/foto4.jpg",
-      "img/trafford/foto5.jpg",
-      "img/trafford/foto6.jpg",
-      "img/trafford/foto7.jpg",
-      "img/trafford/foto8.jpg"
+      "assets/img/trafford/foto1.jpg",
+      "assets/img/trafford/foto2.jpg",
+      "assets/img/trafford/foto3.jpg",
+      "assets/img/trafford/foto4.jpg",
+      "assets/img/trafford/foto5.jpg",
+      "assets/img/trafford/foto6.jpg",
+      "assets/img/trafford/foto7.jpg",
+      "assets/img/trafford/foto8.jpg"
     ]
   },
   {
     id: 7,
     nome: "Signal Iduna Park",
-    imagem: "img/iduna.jpg",
+    imagem: "assets/img/iduna.jpg",
     capacidade: "81.365",
     localizacao: "Dortmund, Alemanha",
     timeMandante: "Borussia Dortmund",
@@ -143,20 +143,20 @@ const estadios = [
     recorde: "80.720 pessoas em uma partida contra o Schalke 04.",
     eventos: "Final da Liga dos Campeões de 2013.",
     imagens: [
-      "img/iduna/foto1.jpg",
-      "img/iduna/foto2.jpg",
-      "img/iduna/foto3.jpg",
-      "img/iduna/foto4.jpg",
-      "img/iduna/foto5.jpg",
-      "img/iduna/foto6.jpg",
-      "img/iduna/foto7.jpg",
-      "img/iduna/foto8.jpg"
+      "assets/img/iduna/foto1.jpg",
+      "assets/img/iduna/foto2.jpg",
+      "assets/img/iduna/foto3.jpg",
+      "assets/img/iduna/foto4.jpg",
+      "assets/img/iduna/foto5.jpg",
+      "assets/img/iduna/foto6.jpg",
+      "assets/img/iduna/foto7.jpg",
+      "assets/img/iduna/foto8.jpg"
     ]
   },
   {
     id: 8,
     nome: "Wembley",
-    imagem: "img/wembley.jpg",
+    imagem: "assets/img/wembley.jpg",
     capacidade: "90.000",
     localizacao: "Londres, Inglaterra",
     timeMandante: "Seleção Inglesa",
@@ -165,20 +165,20 @@ const estadios = [
     recorde: "90.000 pessoas em uma final da Liga dos Campeões.",
     eventos: "Final da Copa do Mundo de 1966, Final da Liga dos Campeões de 2011.",
     imagens: [
-      "img/wembley/foto1.jpg",
-      "img/wembley/foto2.jpg",
-      "img/wembley/foto3.jpg",
-      "img/wembley/foto4.jpg",
-      "img/wembley/foto5.jpg",
-      "img/wembley/foto6.jpg",
-      "img/wembley/foto7.jpg",
-      "img/wembley/foto8.jpg"
+      "assets/img/wembley/foto1.jpg",
+      "assets/img/wembley/foto2.jpg",
+      "assets/img/wembley/foto3.jpg",
+      "assets/img/wembley/foto4.jpg",
+      "assets/img/wembley/foto5.jpg",
+      "assets/img/wembley/foto6.jpg",
+      "assets/img/wembley/foto7.jpg",
+      "assets/img/wembley/foto8.jpg"
     ]
   },
   {
     id: 9,
     nome: "Estádio Monumental",
-    imagem: "img/monumental.jpg",
+    imagem: "assets/img/monumental.jpg",
     capacidade: "83.214",
     localizacao: "Buenos Aires, Argentina",
     timeMandante: "River Plate",
@@ -187,20 +187,20 @@ const estadios = [
     recorde: "Mais de 86.000 torcedores em um clássico River vs Boca.",
     eventos: "Final da Copa Libertadores de 2018 (transferida para Madrid), shows de grandes artistas internacionais.",
     imagens: [
-      "img/monumental/foto1.jpg",
-      "img/monumental/foto2.jpg",
-      "img/monumental/foto3.jpg",
-      "img/monumental/foto4.jpg",
-      "img/monumental/foto5.jpg",
-      "img/monumental/foto6.jpg",
-      "img/monumental/foto7.jpg",
-      "img/monumental/foto8.jpg"
+      "assets/img/monumental/foto1.jpg",
+      "assets/img/monumental/foto2.jpg",
+      "assets/img/monumental/foto3.jpg",
+      "assets/img/monumental/foto4.jpg",
+      "assets/img/monumental/foto5.jpg",
+      "assets/img/monumental/foto6.jpg",
+      "assets/img/monumental/foto7.jpg",
+      "assets/img/monumental/foto8.jpg"
     ]
   },
   {
     id: 10,
     nome: "Parc des Princes",
-    imagem: "img/parc.jpg",
+    imagem: "assets/img/parc.jpg",
     capacidade: "48.712",
     localizacao: "Paris, França",
     timeMandante: "Paris Saint-Germain",
@@ -209,20 +209,20 @@ const estadios = [
     recorde: "49.000 pessoas em uma final da Copa da Liga.",
     eventos: "Jogos Olímpicos de 1998, Final da Liga dos Campeões de 2020.",
     imagens: [
-      "img/parc/foto1.jpg",
-      "img/parc/foto2.jpg",
-      "img/parc/foto3.jpg",
-      "img/parc/foto4.jpg",
-      "img/parc/foto5.jpg",
-      "img/parc/foto6.jpg",
-      "img/parc/foto7.jpg",
-      "img/parc/foto8.jpg"
+      "assets/img/parc/foto1.jpg",
+      "assets/img/parc/foto2.jpg",
+      "assets/img/parc/foto3.jpg",
+      "assets/img/parc/foto4.jpg",
+      "assets/img/parc/foto5.jpg",
+      "assets/img/parc/foto6.jpg",
+      "assets/img/parc/foto7.jpg",
+      "assets/img/parc/foto8.jpg"
     ]
   },
   {
     id: 11,
     nome: "La Bombonera",
-    imagem: "img/bombonera.jpg",
+    imagem: "assets/img/bombonera.jpg",
     capacidade: "54.000",
     localizacao: "Buenos Aires, Argentina",
     timeMandante: "Boca Juniors",
@@ -231,20 +231,20 @@ const estadios = [
     recorde: "54.000 pessoas em um Superclássico contra o River Plate.",
     eventos: "Final da Copa Libertadores de 2000, Superclássicos históricos.",
     imagens: [
-      "img/bombonera/foto1.jpg",
-      "img/bombonera/foto2.jpg",
-      "img/bombonera/foto3.jpg",
-      "img/bombonera/foto4.jpg",
-      "img/bombonera/foto5.jpg",
-      "img/bombonera/foto6.jpg",
-      "img/bombonera/foto7.jpg",
-      "img/bombonera/foto8.jpg"
+      "assets/img/bombonera/foto1.jpg",
+      "assets/img/bombonera/foto2.jpg",
+      "assets/img/bombonera/foto3.jpg",
+      "assets/img/bombonera/foto4.jpg",
+      "assets/img/bombonera/foto5.jpg",
+      "assets/img/bombonera/foto6.jpg",
+      "assets/img/bombonera/foto7.jpg",
+      "assets/img/bombonera/foto8.jpg"
     ]
   },
   {
     id: 12,
     nome: "Anfield",
-    imagem: "img/anfield.jpg",
+    imagem: "assets/img/anfield.jpg",
     capacidade: "54.074",
     localizacao: "Liverpool, Inglaterra",
     timeMandante: "Liverpool FC",
@@ -253,14 +253,14 @@ const estadios = [
     recorde: "54.074 pessoas em um jogo da Premier League.",
     eventos: "Final da Liga dos Campeões de 2005, Final da Premier League de 2019.",
     imagens: [
-      "img/anfield/foto1.jpg",
-      "img/anfield/foto2.jpg",
-      "img/anfield/foto3.jpg",
-      "img/anfield/foto4.jpg",
-      "img/anfield/foto5.jpg",
-      "img/anfield/foto6.jpg",
-      "img/anfield/foto7.jpg",
-      "img/anfield/foto8.jpg"
+      "assets/img/anfield/foto1.jpg",
+      "assets/img/anfield/foto2.jpg",
+      "assets/img/anfield/foto3.jpg",
+      "assets/img/anfield/foto4.jpg",
+      "assets/img/anfield/foto5.jpg",
+      "assets/img/anfield/foto6.jpg",
+      "assets/img/anfield/foto7.jpg",
+      "assets/img/anfield/foto8.jpg"
     ]
   }
 ];
