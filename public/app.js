@@ -200,7 +200,7 @@ const estadios = [
   {
     id: 10,
     nome: "Parc des Princes",
-    imagem: "img/parcdesprinces.jpg",
+    imagem: "img/parc.jpg",
     capacidade: "48.712",
     localizacao: "Paris, França",
     timeMandante: "Paris Saint-Germain",
@@ -222,7 +222,7 @@ const estadios = [
   {
     id: 11,
     nome: "La Bombonera",
-    imagem: "img/labombonera.jpg",
+    imagem: "img/bombonera.jpg",
     capacidade: "54.000",
     localizacao: "Buenos Aires, Argentina",
     timeMandante: "Boca Juniors",

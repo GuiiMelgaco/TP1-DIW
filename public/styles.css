@@ -3,10 +3,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom, #e0f7fa, #ffffff);
   color: #333;
 }
@@ -15,6 +15,21 @@ body {
 header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   background: linear-gradient(to right, #059769, #185a9d);
+}
+
+h5 {
+  font-weight: bold;
+}
+
+.titulo-principal {
+  font-size: 2rem; /* ajuste como quiser */
+  font-weight: bold;
+}
+
+.titulo-sec {
+  font-size: 1.25rem; /* ajuste como quiser */
+  font-weight: bold;
+  color: #059769;
 }
 
 /* Carrossel com estilo moderno */
